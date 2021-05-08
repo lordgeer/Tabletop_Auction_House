@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
       }
     ]
   })
-    .then(dbTagData => res.json(dbTagData))
+    .then(dbStoreData => res.json(dbStoreData))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
@@ -34,12 +34,12 @@ router.get('/:id', (req, res) => {
       }
     ]
   })
-    .then(dbTagData => {
-      if (!dbTagData) {
+    .then(dbStoreData => {
+      if (!dbStoreData) {
         res.status(404).json({ message: 'No such entry found'});
         return;
       }
-      res.json(dbTagData);
+      res.json(dbStoreData);
     })
     .catch(err => {
       console.log(err);
@@ -49,9 +49,9 @@ router.get('/:id', (req, res) => {
  // create a new tag
 router.post('/', (req, res) => {
   Tag.create({
-    tag_name: req.body.tag_name
+    store_name: req.body.store_name
   })
-    .then(dbTagData => res.json(dbTagData))
+    .then(dbStoreData => res.json(dbStoreData))
     .catch(err => {
         console.log(err);
         res.status(400).json(err);
@@ -64,12 +64,12 @@ router.put('/:id', (req, res) => {
         id: req.params.id
     }
   })
-    .then(dbTagData => {
-        if (!dbTagData[0]) {
+    .then(dbStoreData => {
+        if (!dbStoreData[0]) {
             res.status(404).json({ message: 'No such entry found'});
             return;
         }
-        res.json(dbTagData);
+        res.json(dbStoreData);
   })
     .catch(err => {
         console.log(err); 
@@ -84,12 +84,12 @@ router.delete('/:id', (req, res) => {
       id: req.params.id
     }
   })
-    .then(dbTagData => {
-      if (!dbTagData) {
+    .then(dbStoreData => {
+      if (!dbStoreData) {
         res.status(404).json({ message: "No such entry found"});
         return;
       }
-      res.json(dbTagData);
+      res.json(dbStoreData);
     })
     .catch(err => {
       console.log(err);
