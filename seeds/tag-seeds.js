@@ -1,33 +1,21 @@
 const { Tag } = require('../models');
 
-const tagData = [
+const storeData = [
   {
-    tag_name: 'rock music',
+    store_name: 'd&d',
   },
   {
-    tag_name: 'pop music',
+    store_name: 'starwars',
   },
   {
-    tag_name: 'blue',
+    store_name: 'pathfinder',
   },
   {
-    tag_name: 'red',
-  },
-  {
-    tag_name: 'green',
-  },
-  {
-    tag_name: 'white',
-  },
-  {
-    tag_name: 'gold',
-  },
-  {
-    tag_name: 'pop culture',
+    store_name: 'vampire',
   },
 ];
 
-const seedTags = () => Tag.bulkCreate(tagData);
+const seedTags = () => Tag.bulkCreate(storeData);
 
 module.exports = seedTags;
 
