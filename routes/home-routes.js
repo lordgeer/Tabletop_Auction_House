@@ -5,9 +5,6 @@ const withAuth = require('../utils/auth');
 
 
 
-
-
-// Prevent non logged in users from viewing the homepage
 router.get('/shop', withAuth, async (req, res) => {
   try {
     const productData = await User.findAll({
@@ -19,7 +16,6 @@ router.get('/shop', withAuth, async (req, res) => {
 
     res.render('shop', {
       users,
-      // Pass the logged in flag to the template
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -34,7 +30,7 @@ router.get('*', (req, res) => {
     return;
   }
 
-  res.render('landing');
+  res.render('login');
 });
 
 module.exports = router;
