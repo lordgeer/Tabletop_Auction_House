@@ -2,8 +2,13 @@ const router = require('express').Router();
 const { Product } = require('../models');
 const withAuth = require('../utils/auth');
 
+
+
+
+
+
 // Prevent non logged in users from viewing the homepage
-router.get('/', withAuth, async (req, res) => {
+router.get('/shop', withAuth, async (req, res) => {
   try {
     const productData = await User.findAll({
       attributes: { },
@@ -22,10 +27,10 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
-router.get('/login', (req, res) => {
+router.get('*', (req, res) => {
   // If a session exists, redirect the request to the homepage
   if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect('/shop');
     return;
   }
 
