@@ -4,27 +4,8 @@ const withAuth = require('../utils/auth');
 
 
 
-
-router.get('/shop', withAuth, async (req, res) => {
-  try {
-    const productData = await User.findAll({
-      attributes: { },
-      order: [['name', 'ASC']],
-    });
-
-    const users = productData.map((project) => project.get({ plain: true }));
-
-    res.render('shop', {
-      users,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
-
-router.get('*', (req, res) => {
-  // If a session exists, redirect the request to the homepage
+router.get('/', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect('/shop');
     return;
@@ -32,5 +13,34 @@ router.get('*', (req, res) => {
 
   res.render('login');
 });
+
+router.get('/shop', async (req, res) => {
+  try {
+    // Get all projects and JOIN with user data
+    const productData = await Product.findAll({
+      // include: [
+      //   {
+      //     model: Product,
+      //     attributes: ['name'],
+      //   },
+      // ],
+    });
+console.log(productData);
+    // Serialize data so the template can read it
+    const products = productData.map((product) => product.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('shop', { 
+      products, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+
+
 
 module.exports = router;
