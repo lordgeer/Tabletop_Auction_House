@@ -5,35 +5,16 @@
 
 <button type="button">Add Item</button>
 
-<select>
-    <option value="volvo">D&#38;D</option>
-    <option value="saab">Starwars</option>
-    <option value="saab">Pathfinder</option>
-    <option value="saab">Vampire</option>
-</select>
+{{!-- Not yet implemented --}}
+{{!-- <select>
+    <option>D&#38;D</option>
+    <option>Starwars</option>
+    <option>Pathfinder</option>
+    <option>Vampire</option>
+</select> --}}
 
 <main>
-    <div><span>Item name here...</span><button type="button">Edit</button><button type="button">Delete</button></div>
+  {{#each products as |product|}}
+  {{> product-details}}
+  {{/each}}
 </main>
-
-{{#each products as |product| }}
-<div class="row mb-4 product">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      <a href="/product/{{product.id}}">{{product_name}}</a>
-    </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="quantitiy-available">{{stock}}</span>
-    </p>
-    </div>
-  <div class="col-md-7">
-    <p>
-      {{product.description}}
-    </p>
-  </div>
-</div>
-{{/each}}
-
