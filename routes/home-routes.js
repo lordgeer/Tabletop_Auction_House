@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Product } = require('../models');
-const withAuth = require('../utils/auth');
+// const withAuth = require('../utils/auth');
 
 
 
@@ -25,22 +25,44 @@ router.get('/shop', async (req, res) => {
       //   },
       // ],
     });
-console.log(productData);
+    console.log(productData);
     // Serialize data so the template can read it
     const products = productData.map((product) => product.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('shop', { 
-      products, 
-      logged_in: req.session.logged_in 
+    res.render('shop', {
+      products,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     console.log(err);
-    res.status(500).json(err);
+    res.status(400).json(err);
   }
 });
 
+router.get('/signup', async (req, res) => {
+  try {
+    const { name, password} = req.body;
+      if (users.find(user => user.name === name)) {
 
+        res.render('signup', {
+          message: 'User already registered.',
+          messageClass: 'alert-danger'
+        });
 
-
-module.exports = router;
+        return;
+      }
+      users.push({
+        name,
+        password
+      });
+      res.render('shop', {
+        products,
+        logged_in: req.session.logged_in
+      });
+    } catch(err) {
+      console.log(err);
+      res.status(400).json(err);
+    }
+  });
+  module.exports = router;
