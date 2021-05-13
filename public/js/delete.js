@@ -10,7 +10,7 @@ const delButtonHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/product');
       } else {
-        alert('Failed to delete project');
+        alert('Thre may have been a problem delteting. Maybe check that out and try again');
       }
     }
   };
