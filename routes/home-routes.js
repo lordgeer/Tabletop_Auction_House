@@ -33,7 +33,7 @@ router.get('/shop', async (req, res) => {
     res.status(400).json(err);
   }
 });
-
+// working signup route
 router.get('/signup', async (req, res) => {
   try {
     const { name, password} = req.body;
