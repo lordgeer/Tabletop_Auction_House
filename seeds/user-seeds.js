@@ -8,11 +8,11 @@ const userData = [
   },
   {
     "name": "Elise",
-    "password": "password2021"
+    "password": "password1234"
   },
   {
     "name": "Dana",
-    "password": "dana12345"
+    "password": "password1234"
   }
 ]
 
