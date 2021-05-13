@@ -22,13 +22,10 @@ const loginFormHandler = async (event) => {
   }
 };
 
-const signupButtonScript = () => {
+document.getElementById("signup-button").addEventListener("click", function() {
   document.location.replace('/signup');
-};
+});
   
 document
   .querySelector('#login-form')
-  .addEventListener('submit', loginFormHandler)
-  
-  .querySelector('#signup-button')
-  .addEventListener('click', signupButtonScript);
+  .addEventListener('submit', loginFormHandler);
