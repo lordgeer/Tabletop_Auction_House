@@ -22,10 +22,7 @@ const loginFormHandler = async (event) => {
   }
 };
 
-const signupButtonScript = async (event) => {
-  event.preventDefault();
-
-  // why won't this push
+const signupButtonScript = () => {
   document.location.replace('/signup');
 };
   
@@ -33,7 +30,5 @@ document
   .querySelector('#login-form')
   .addEventListener('submit', loginFormHandler)
   
-  .querySelector('#signup-form')
+  .querySelector('#signup-button')
   .addEventListener('click', signupButtonScript);
-    
-  
