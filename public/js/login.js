@@ -1,6 +1,6 @@
 document.getElementById("logout-button").addEventListener("click", function() {
-  // Do logout stuff
-  console.log('click');
+  // Add logout functionality
+  console.log('Logout!');
 });
 
 const loginFormHandler = async (event) => {

@@ -3,12 +3,12 @@ document.getElementById("home-button").addEventListener("click", function() {
 });
 
 document.getElementById("logout-button").addEventListener("click", function() {
-  // Do logout stuff
-  console.log('click');
+  // Add logout functionality
+  console.log('Logout!');
 });
 
-document.getElementById("product-button").addEventListener("click", function() {
+document.getElementById("addItem-button").addEventListener("click", function() {
     document.location.replace('/product');
 });
 
-// Edit and delete buttons for partials have be linked by id...
+// Need view item functionality
