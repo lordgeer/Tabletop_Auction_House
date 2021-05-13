@@ -52,6 +52,10 @@ router.get('/:id', (req, res) => {
         return; 
       }
       res.json(dbProductData);
+      res.render('product', {
+        product,
+        logged_in: req.session.logged_in
+      });
     })
     .catch(err => {
       console.log(err);

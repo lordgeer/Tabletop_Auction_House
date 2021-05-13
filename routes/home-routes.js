@@ -56,7 +56,7 @@ router.get('/signup', async (req, res) => {
         name,
         password
       });
-      res.render('shop', {
+      res.render('signup', {
         products,
         logged_in: req.session.logged_in
       });
@@ -65,4 +65,14 @@ router.get('/signup', async (req, res) => {
       res.status(400).json(err);
     }
   });
+
+  // router.get('/product', async (req, res) => {
+  //   try {
+  //     const productData = await Product.findOne({
+  //   } catch (error) {
+      
+  //   }
+  // })
+
+
   module.exports = router;
