@@ -1,0 +1,32 @@
+<button type="button" id="goBack-button">Go Back</button>
+
+<h2>Add an Item</h2>
+
+<form id="product-form">
+    <input type="text" placeholder="Item name..." id="item-name"><br>
+    <input type="text" placeholder="Price..." id="item-price"><br>
+    <input type="text" placeholder="Quantity..." id="item-quantity"><br>
+    <select>
+        <option>Weapons</option>
+        <option>Armor</option>
+        <option>Utility</option>
+        <option>Technology</option>
+        <option>Companions</option>
+        <option>Droids</option>
+        <option>Magic Items</option>
+        <option>Vehicles</option>
+        {{!-- This is a duplicate category... --}}
+        <option>Companions</option>
+        <option>Collectibles</option>
+        <option>Vehicles</option>
+    </select><br>
+    <select>
+        <option>DnD</options>
+        <option>Star Wars</option>
+        <option>Vampire</option>
+        <option>Pathfinder</option>
+    </select>
+    <input type="submit" value="Save Item" id="saveItem-button"><br>
+</form>
+
+<script src="./js/product.js"></script>
