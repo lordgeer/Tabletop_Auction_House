@@ -25,7 +25,8 @@ const loginFormHandler = async (event) => {
 const signupButtonScript = async (event) => {
   event.preventDefault();
 
-  document.location.replace('signup');
+  // why won't this push
+  document.location.replace('/signup');
 };
   
 document
