@@ -5,6 +5,7 @@ document.getElementById("home-button").addEventListener("click", function() {
 document.getElementById("logout-button").addEventListener("click", function() {
   // Add logout functionality
   console.log('Logout!');
+  document.location.replace('/');
 });
 
 document.getElementById("addItem-button").addEventListener("click", function() {
