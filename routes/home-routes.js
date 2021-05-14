@@ -16,14 +16,8 @@ router.get('/', (req, res) => {
 
 router.get('/shop', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
+    // Get all products and JOIN with user data
     const productData = await Product.findAll({
-      // include: [
-      //   {
-      //     model: Product,
-      //     attributes: ['name'],
-      //   },
-      // ],
     });
     console.log(productData);
     // Serialize data so the template can read it
@@ -39,25 +33,14 @@ router.get('/shop', async (req, res) => {
     res.status(400).json(err);
   }
 });
-
+// working signup route
 router.get('/signup', async (req, res) => {
   try {
     const { name, password} = req.body;
-      if (users.find(user => user.name === name)) {
-
-        res.render('signup', {
-          message: 'User already registered.',
-          messageClass: 'alert-danger'
-        });
-
-        return;
-      }
-      users.push({
-        name,
-        password
-      });
+   
+   
       res.render('signup', {
-        products,
+       
         logged_in: req.session.logged_in
       });
     } catch(err) {
@@ -66,13 +49,38 @@ router.get('/signup', async (req, res) => {
     }
   });
 
-  // router.get('/product', async (req, res) => {
-  //   try {
-  //     const productData = await Product.findOne({
-  //   } catch (error) {
-      
-  //   }
-  // })
+  router.get('/product', async (req, res) => {
+    try {
+      // Get all products and JOIN with user data
+      const productData = await Product.findAll({
+      });
+      console.log(productData);
+      // Serialize data so the template can read it
+      const products = productData.map((product) => product.get({ plain: true }));
+      // Pass serialized data and session flag into template
+      res.render('product', {
+        products,
+        logged_in: req.session.logged_in
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(400).json(err);
+    }
+  });
 
-
+  router.get('/product/:id', async (req, res) => {
+    try {
+      const productData = await product.findByPk(req.params.id, {});
+  
+      const product = productData.get({ plain: true });
+  
+      res.render('view', {
+        ...product,
+        logged_in: req.session.logged_in
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+  
   module.exports = router;
