@@ -62,14 +62,6 @@ const productData = [
     category_id: 1,
   },
   {
-    product_name: "AP-M1 Armour Piercing Grenade",
-    category_name: "Weapons",
-    store_name: "starwars",
-    price: 200,
-    stock: 5,
-    category_id: 1,
-  },
-  {
     product_name: "Bowcaster",
     category_name: "Weapons",
     store_name: "starwars",

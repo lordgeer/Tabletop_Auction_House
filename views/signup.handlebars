@@ -1,12 +1,34 @@
-<button type="button" id="goBack-button">Go Back</button>
+<div class="font-sans min-h-screen antialiased bg-indigo-100 pt-10 space-y-14">
 
-<h2>Sign Up</h2>
+<button type="button" id="goBack-button" class="border-2 bg-gray-100 border-blue-600 rounded-lg px-3 py-2 text-blue-400 cursor-pointer hover:bg-blue-600 hover:text-blue-200">Go Back</button>
 
-<form id="signup-form">
-    <input type="text" placeholder="Username" id="username-signup"><br>
-    <input type="text" placeholder="Password" id="password-signup"><br>
-    <input type="submit" value="Submit"><br>
+<img class="mx-auto shadow-lg" src="./img/TabletopAuctionHouse.jpg" alt="Tabletop Auction House">
+
+<div class="flex flex-col justify-center sm:w-96 sm:m-auto mx-5 mb-5 space-y-8">
+
+<form id="signup-form" class="border-2 border-blue-600 rounded-lg shadow-md">
+    <div class="flex flex-col bg-gray-100 p-10 rounded-lg shadow space-y-6">
+        <h1 class="font-bold text-xl text-center">Account Sign Up</h1>
+    <div class="flex flex-col space-y-1">
+    <input type="text" placeholder="Username" id="username-signup">
+    </div>
+    <div class="flex flex-col space-y-1">
+    <input type="text" placeholder="Password" id="password-signup">
+    </div>
+    <button type="submit" class="border-2 bg-gray-100 border-blue-600 rounded-lg px-3 py-2 text-blue-400 cursor-pointer hover:bg-blue-600 hover:text-blue-200">Submit</button><br>
     {{!-- <label for="dm-signup">Are you a DM?</label><input type="checkbox" id="dm-signup"> --}}
+    </div>
 </form>
+
+<div class="flex justify-center font-bold text-md">
+    <p>Created by <a class="underline" href="https://github.com/elisesamanthadaly">Elise Daly</a>, <a class="underline"
+            href="https://github.com/smakela13">Sarah Mäkelä</a>, <a class="underline"
+            href="https://github.com/lordgeer/">Thomas Musler</a>, and <a class="underline"
+            href="https://github.com/dtmerrill">Dana Merrill</a>.</p>
+</div>
+
+</div>
+
+</div>
 
 <script src="./js/signup.js"></script>
