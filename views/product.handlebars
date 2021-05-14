@@ -1,11 +1,25 @@
-<button type="button" id="goBack-button">Go Back</button>
+<div class="font-sans min-h-screen antialiased bg-indigo-100 pt-10 space-y-14">
 
-<h2>Add an Item</h2>
+<button type="button" id="goBack-button" class="border-2 bg-gray-100 border-blue-600 rounded-lg px-3 py-2 text-blue-400 cursor-pointer hover:bg-blue-600 hover:text-blue-200">Go Back</button>
 
-<form id="product-form">
-    <input type="text" placeholder="Item name..." id="item-name"><br>
-    <input type="text" placeholder="Price..." id="item-price"><br>
-    <input type="text" placeholder="Quantity..." id="item-quantity"><br>
+<img class="mx-auto shadow-lg" src="./img/TabletopAuctionHouse.jpg" alt="Tabletop Auction House">
+
+<div class="flex flex-col justify-center sm:w-96 sm:m-auto mx-5 mb-5 space-y-8">
+
+<form id="product-form" class="border-2 border-blue-600 rounded-lg shadow-md">
+    <div class="flex flex-col bg-gray-100 p-10 rounded-lg shadow space-y-6">
+    <h1 class="font-bold text-xl text-center">Add an Item</h1>
+    
+    <div class="flex flex-col space-y-1">
+    <input type="text" placeholder="Item name..." id="item-name">
+    </div>
+    <div class="flex flex-col space-y-1">
+    <input type="text" placeholder="Price..." id="item-price">
+    </div>
+    <div class="flex flex-col space-y-1">
+    <input type="text" placeholder="Quantity..." id="item-quantity">
+    </div>
+    <div class="flex flex-col space-y-1">
     <select>
         <option>Weapons</option>
         <option>Armor</option>
@@ -16,14 +30,19 @@
         <option>Magic Items</option>
         <option>Vehicles</option>
         <option>Mounts</option>
-    </select><br>
+    </select>
+    </div>
     <select>
         <option>DnD</options>
         <option>Star Wars</option>
         <option>Vampire</option>
         <option>Pathfinder</option>
     </select>
-    <input type="submit" value="Save Item" id="saveItem-button"><br>
+    <input type="submit" value="Save Item" id="saveItem-button" class="border-2 border-blue-600 rounded-lg px-3 py-2 text-blue-400 cursor-pointer hover:bg-blue-600 hover:text-blue-200"><br>
+    </div>
 </form>
+
+</div>
+</div>
 
 <script src="./js/product.js"></script>
