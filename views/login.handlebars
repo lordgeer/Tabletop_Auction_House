@@ -1,11 +1,31 @@
-<button type="button" id="logout-button">Logout</button>
+<div class="font-sans min-h-screen antialiased bg-indigo-100 pt-10 space-y-14">
 
-<h1>Tabletop Auction House</h1>
+<button type="button" id="logout-button" class="border-2 bg-gray-100 border-blue-600 rounded-lg px-3 py-2 text-blue-400 cursor-pointer hover:bg-blue-600 hover:text-blue-200">Logout</button>
 
-<form id="login-form">
-    <input type="text" placeholder="Username" id="username-login"><br>
-    <input type="text" placeholder="Password" id="password-login"><br>
-    <input type="submit" value="Login"><button type="button" id="signup-button">Signup</button>
+<br>
+
+<img class="mx-auto shadow-lg" src="./img/TabletopAuctionHouse.jpg" alt="Tabletop Auction House">
+
+<div class="flex flex-col justify-center sm:w-96 sm:m-auto mx-5 mb-5 space-y-8">
+
+<form id="login-form" class="border-2 border-blue-600 rounded-lg shadow-md">
+    <div class="flex flex-col bg-gray-100 p-10 rounded-lg shadow space-y-6">
+        <h1 class="font-bold text-xl text-center">Account Sign In</h1>
+    <div class="flex flex-col space-y-1">
+    <input type="text" class="border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow" placeholder="Username" id="username-login">
+    </div>
+    <div class="flex flex-col space-y-1">
+    <input type="text" class="border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow" placeholder="Password" id="password-login">
+    </div>
+    <button type="submit" value="Log In" class="border-2 border-blue-600 rounded-lg px-3 py-2 text-blue-400 cursor-pointer hover:bg-blue-600 hover:text-blue-200">Log In</button> <button type="button" id="signup-button" class="border-2 border-blue-600 rounded-lg px-3 py-2 text-blue-400 cursor-pointer hover:bg-blue-600 hover:text-blue-200">Sign Up</button>
+    </div>
 </form>
+<div class="flex justify-center font-bold text-md">
+    <p>Created by <a class="underline" href="https://github.com/elisesamanthadaly">Elise Daly</a>, <a class="underline" href="https://github.com/smakela13">Sarah Mäkelä</a>, <a class="underline" href="https://github.com/lordgeer/">Thomas Musler</a>, and <a class="underline" href="https://github.com/dtmerrill">Dana Merrill</a>.</p>
+</div>
 
+</div>
+</div>
+
+{{!-- Does this matter if it's not a relative path? -Ed --}}
 <script src="./js/login.js"></script>

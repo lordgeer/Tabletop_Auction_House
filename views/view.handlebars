@@ -1,4 +1,6 @@
-<button type="button" id="goBack-button">Go Back</button>
+<div class="font-sans min-h-screen antialiased bg-indigo-100 pt-10 space-y-14">
+
+<button type="button" id="goBack-button" class="border-2 bg-gray-100 border-blue-600 rounded-lg px-3 py-2 text-blue-400 cursor-pointer hover:bg-blue-600 hover:text-blue-200">Go Back</button>
 
 <h2>Add an Item</h2>
 
@@ -15,10 +17,7 @@
         <option>Droids</option>
         <option>Magic Items</option>
         <option>Vehicles</option>
-        {{!-- This is a duplicate category... --}}
-        <option>Companions</option>
-        <option>Collectibles</option>
-        <option>Vehicles</option>
+        <option>Mounts</option>
     </select><br>
     <select>
         <option>DnD</options>
@@ -28,5 +27,7 @@
     </select>
     <input type="submit" value="Save Item" id="saveItem-button"><br>
 </form>
+
+</div>
 
 <script src="./js/product.js"></script>
