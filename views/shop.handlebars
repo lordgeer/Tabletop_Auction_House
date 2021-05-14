@@ -1,9 +1,11 @@
-<button type="button" id="home-button">Home</button>
-<button type="button" id="logout-button">Logout</button>
+<div class="font-sans min-h-screen antialiased bg-indigo-100 pt-10 space-y-5">
+
+<button class="border-2 bg-gray-100 border-blue-600 rounded-lg px-3 py-2 text-blue-400 cursor-pointer hover:bg-blue-600 hover:text-blue-200" type="button" id="home-button">Home</button>
+<button class="border-2 bg-gray-100 border-blue-600 rounded-lg px-3 py-2 text-blue-400 cursor-pointer hover:bg-blue-600 hover:text-blue-200" type="button" id="logout-button">Logout</button>
 
 <br>
 
-<button type="button" id="addItem-button">Add Item</button>
+<button class="border-2 bg-gray-100 border-blue-600 rounded-lg px-3 py-2 text-blue-400 cursor-pointer hover:bg-blue-600 hover:text-blue-200" type="button" id="addItem-button">Add Item</button>
 
 {{!-- UI drop-down not implemented --}}
 {{!-- <select>
@@ -18,6 +20,6 @@
   {{>product-details}}
   {{/each}}
 </main>
-
+</div>
 <script src="./js/shop.js"></script>
 <script src="./js/logout.js"></script>
