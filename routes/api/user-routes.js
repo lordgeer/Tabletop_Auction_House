@@ -1,11 +1,12 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+// const seedUsers = require('../../seeds/user-seeds');
 
 router.post('/login', async (req, res) => {
   console.log(req.body);
   try {
     // Find the user who matches the posted user name
-    const userData = await User.findOne({ where: { email: req.body.username } });
+    const userData = await User.findOne({ where: { name: req.body.username } });
 
     if (!userData) {
       res
@@ -13,17 +14,17 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect User Name or Password, please try again' });
       return;
     }
-
+console.log("text");
     // Verify the posted password with the password store in the database
     const validPassword = await userData.checkPassword(req.body.password);
-
+console.log(validPassword);
     if (!validPassword) {
       res
         .status(400)
         .json({ message: 'Incorrect User Name or Password, please try again' });
       return;
     }
-
+console.log("text2");
     // Create session variables based on the logged in user
     req.session.save(() => {
       req.session.user_id = userData.id;
@@ -31,9 +32,10 @@ router.post('/login', async (req, res) => {
       
       res.json({ user: userData, message: 'Welcome back to the Auction House!' });
     });
-
   } catch (err) {
     res.status(400).json(err);
+    console.log(err);
+    
   }
 });
 // post route for signup

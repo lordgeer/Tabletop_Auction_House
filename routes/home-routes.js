@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Product } = require('../models');
-// const withAuth = require('../utils/auth');
+const withAuth = require('../utils/auth');
 
 
 
@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
   res.render('login');
 });
 
-router.get('/shop', async (req, res) => {
+router.get('/shop', withAuth, async (req, res) => {
   try {
     // Get all products and JOIN with user data
     const productData = await Product.findAll({
@@ -26,7 +26,7 @@ router.get('/shop', async (req, res) => {
     // Pass serialized data and session flag into template
     res.render('shop', {
       products,
-      logged_in: req.session.logged_in
+      logged_in: true
     });
   } catch (err) {
     console.log(err);
