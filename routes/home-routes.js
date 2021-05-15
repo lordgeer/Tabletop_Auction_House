@@ -36,7 +36,7 @@ router.get('/shop', withAuth, async (req, res) => {
 // working signup route
 router.get('/signup', async (req, res) => {
   try {
-    const { name, password} = req.body;
+    const { name, password } = req.body;
    
    
       res.render('signup', {
