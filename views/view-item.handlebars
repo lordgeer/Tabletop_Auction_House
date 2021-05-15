@@ -1,0 +1,20 @@
+<div class="font-sans min-h-screen antialiased bg-indigo-100 pt-10 space-y-14">
+
+<button type="button" id="goBack-button" class="border-2 bg-gray-100 border-blue-600 rounded-lg px-3 py-2 text-blue-400 cursor-pointer hover:bg-blue-600 hover:text-blue-200">Go Back</button>
+
+<h2>View an Item</h2>
+
+<div class="flex flex-col space-y-1">Item Name: <span type="text" placeholder="Item Name" id="item-name">{{product_name}}</span>
+</div>
+<div class="flex flex-col space-y-1">Price: <span type="text" placeholder="Price" id="item-price">{{price}}</span>
+<div class="flex flex-col space-y-1">Quantity: <span type="text" placeholder="Quantity" id="item-quantity">{{stock}}</span>
+</div>
+
+<button type="button"
+    class="deleteItem-button border-2 bg-gray-100 border-blue-600 rounded-lg px-3 py-2 my-1 text-blue-400 cursor-pointer hover:bg-blue-600 hover:text-blue-200"
+    id="{{id}}">Delete
+</button>
+
+</div>
+
+<script src="/js/view-item.js"></script>
