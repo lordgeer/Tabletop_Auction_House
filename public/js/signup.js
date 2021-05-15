@@ -25,3 +25,11 @@ document
     .querySelector('#signup-form')
     .addEventListener('submit', signupFormHandler);
   
+document.getElementById("eyeButton").addEventListener("click", function() {
+  if (document.querySelector('#password-signup').type === "password") {
+    document.querySelector('#password-signup').type = "input";
+  }
+  else {
+    document.querySelector('#password-signup').type = "password";
+  }
+});
