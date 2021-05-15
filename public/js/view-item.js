@@ -16,6 +16,7 @@ function deleteItem() {
         );
 
         if (response.ok) {
+
           document.location.replace("/shop");
         } else {
           alert(
