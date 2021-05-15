@@ -6,9 +6,8 @@ const productFormHandler = async (event) => {
     const itemName = document.querySelector('#item-name').value.trim();
     const itemPrice = document.querySelector('#item-price').value.trim();
     const itemQuantity = document.querySelector('#item-quantity').value.trim();
-    const itemCategory = document.querySelector('#item-category').value.trim();
-    const itemTag = document.querySelector('#item-tag').value.trim();   
-  
+    const itemCategory = document.querySelector('#item-category').value;
+    const itemTag = document.querySelector('#item-tag').value;   
   
     if (itemName && itemPrice && itemQuantity && itemCategory && itemTag) {
       // Send the item-name and password to the server
@@ -27,15 +26,8 @@ const productFormHandler = async (event) => {
     }
   };
 
+document.getElementById("product-form").addEventListener("submit", productFormHandler);
 
 document.getElementById("goBack-button").addEventListener("click", function() {
     document.location.replace('/shop');
-});
-
-document.getElementById("saveItem-button").addEventListener("click", function(event) {
-    event.preventDefault();
-    document.location.replace('/shop');
-
-    // Do save item stuff
-    console.log('click');
 });
