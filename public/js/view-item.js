@@ -16,7 +16,7 @@ function deleteItem() {
         );
 
         if (response.ok) {
-          document.location.replace("/product");
+          document.location.replace("/shop");
         } else {
           alert(
             "There may have been a problem deleting. Maybe check that out and try again"
