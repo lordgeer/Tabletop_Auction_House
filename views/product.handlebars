@@ -11,17 +11,17 @@
     <h1 class="font-bold text-xl text-center">Add an Item</h1>
     
     <div class="flex flex-col space-y-1">
-    <input type="text" placeholder="Item Name" id="item-name">
+    <input type="text" class="border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow" placeholder="Item Name" id="item-name">
     </div>
     <div class="flex flex-col space-y-1">
-    <input type="text" placeholder="Price" id="item-price">
+    <input type="text" class="border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow" placeholder="Price" id="item-price">
     </div>
     <div class="flex flex-col space-y-1">
-    <input type="text" placeholder="Quantity" id="item-quantity">
+    <input type="text" class="border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow" placeholder="Quantity" id="item-quantity">
     </div>
     <div class="flex flex-col space-y-1">
-    <select id="item-category">
-        <option value="" disabled selected hidden>Category...</option>
+    <select id="item-category" class="border-2 rounded px-3 py-2 w-full focus:outline-none focus:border-blue-400 focus:shadow">
+        <option value="" disabled selected hidden>Category</option>
         <option value="1">Weapons</option>
         <option value="2">Armor</option>
         <option value="3">Utility</option>
@@ -33,15 +33,24 @@
         <option value="9">Mounts</option>
     </select>
     </div>
-    {{!-- <select id="item-tag">
+    {{!-- For future development 
+        <select id="item-tag">
         <option value="DnD">DnD</options>
         <option>Star Wars</option>
         <option>Vampire</option>
         <option>Pathfinder</option>
     </select> --}}
-    <input type="submit" value="Save Item" id="saveItem-button" class="border-2 border-blue-600 rounded-lg px-3 py-2 text-blue-400 cursor-pointer hover:bg-blue-600 hover:text-blue-200"><br>
+    <input type="submit" value="Save Item" id="saveItem-button" class="border-2 bg-gray-100 border-blue-600 rounded-lg px-3 py-2 text-blue-400 cursor-pointer hover:bg-blue-600 hover:text-blue-200"><br>
     </div>
 </form>
+
+<div class="flex justify-center font-bold text-md">
+    <p>Created by <a class="underline" href="https://github.com/elisesamanthadaly">Elise Daly</a>, <a class="underline"
+            href="https://github.com/smakela13">Sarah Mäkelä</a>, <a class="underline"
+            href="https://github.com/lordgeer/">Thomas Musler</a>, and <a class="underline"
+            href="https://github.com/dtmerrill">Dana Merrill</a>.
+    </p>
+</div>
 
 </div>
 </div>
