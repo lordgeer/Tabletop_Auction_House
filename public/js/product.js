@@ -16,9 +16,8 @@ const productFormHandler = async (event) => {
         body: JSON.stringify({product_name, price, stock, category_id}),
         headers: { 'Content-Type': 'application/json' },
       });
-      console.log(product_name);
       if (response.ok) {
-        document.location.replace('/shop');
+        // document.location.replace('/shop');
         alert('Your item has been added! Thanks for using the Auction House!')
       } else {
         alert('The item you were looking to add does not want to, maybe check again?');
