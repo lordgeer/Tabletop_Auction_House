@@ -49,7 +49,7 @@ router.get('/signup', async (req, res) => {
     }
   });
 
-  router.get('/product', async (req, res) => {
+  router.get('/product', withAuth, async (req, res) => {
     try {
       // Get all products and JOIN with user data
       const productData = await Product.findAll({
@@ -68,13 +68,13 @@ router.get('/signup', async (req, res) => {
     }
   });
 
-  router.get('/view/:id', async (req, res) => {
+  router.get('/view-item/:id', withAuth, async (req, res) => {
     try {
       const productData = await Product.findByPk(req.params.id, {});
   
       const product = productData.get({ plain: true });
   
-      res.render('view', {
+      res.render('view-item', {
         ...product,
         logged_in: req.session.logged_in
       });
