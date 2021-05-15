@@ -8,7 +8,7 @@ const productFormHandler = async (event) => {
     const stock = document.querySelector('#item-quantity').value.trim();
     const category_id = document.querySelector('#item-category').value;
     // Different shop selectors not currently being used
-    const tag_id = document.querySelector('#item-tag').value;
+    // const tag_id = document.querySelector('#item-tag').value;
   
     if (product_name && price && stock && category_id) {
       // Send the item-name and password to the server
