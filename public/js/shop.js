@@ -1,7 +1,3 @@
-document.getElementById("home-button").addEventListener("click", function() {
-  document.location.replace('/');
-});
-
 document.getElementById("logout-button").addEventListener("click", function() {
   // Add logout functionality
   console.log('Logout!');
@@ -17,7 +13,7 @@ function viewItem() {
   x = document.querySelectorAll(".viewItem-button");
   for (i = 0; i < x.length; i++) {
     x[i].addEventListener("click", function(target) {
-      document.location.replace(`/view/${target.path[0].attributes[2].nodeValue}`);
+      document.location.replace(`/view-item/${target.path[0].attributes[2].nodeValue}`);
     });
   }
 }
