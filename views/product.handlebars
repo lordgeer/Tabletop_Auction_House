@@ -21,23 +21,24 @@
     </div>
     <div class="flex flex-col space-y-1">
     <select id="item-category">
-        <option value="Weapons">Weapons</option>
-        <option>Armor</option>
-        <option>Utility</option>
-        <option>Technology</option>
-        <option>Companions</option>
-        <option>Droids</option>
-        <option>Magic Items</option>
-        <option>Vehicles</option>
-        <option>Mounts</option>
+        <option value="" disabled selected hidden>Category...</option>
+        <option value="1">Weapons</option>
+        <option value="2">Armor</option>
+        <option value="3">Utility</option>
+        <option value="4">Technology</option>
+        <option value="5">Companions</option>
+        <option value="6">Droids</option>
+        <option value="7">Magic Items</option>
+        <option value="8">Vehicles</option>
+        <option value="9">Mounts</option>
     </select>
     </div>
-    <select id="item-tag">
+    {{!-- <select id="item-tag">
         <option value="DnD">DnD</options>
         <option>Star Wars</option>
         <option>Vampire</option>
         <option>Pathfinder</option>
-    </select>
+    </select> --}}
     <input type="submit" value="Save Item" id="saveItem-button" class="border-2 border-blue-600 rounded-lg px-3 py-2 text-blue-400 cursor-pointer hover:bg-blue-600 hover:text-blue-200"><br>
     </div>
 </form>

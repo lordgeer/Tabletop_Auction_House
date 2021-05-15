@@ -7,9 +7,10 @@ const productFormHandler = async (event) => {
     const price = document.querySelector('#item-price').value.trim();
     const stock = document.querySelector('#item-quantity').value.trim();
     const category_id = document.querySelector('#item-category').value;
-    const tag_id = document.querySelector('#item-tag').value;   
+    // Different shop selectors not currently being used
+    const tag_id = document.querySelector('#item-tag').value;
   
-    if (product_name && price && stock && category_id && tag_id) {
+    if (product_name && price && stock && category_id) {
       // Send the item-name and password to the server
       const response = await fetch('/api/products/product', {
         method: 'POST',
@@ -17,7 +18,7 @@ const productFormHandler = async (event) => {
         headers: { 'Content-Type': 'application/json' },
       });
       if (response.ok) {
-        // document.location.replace('/shop');
+        document.location.replace('/shop');
         alert('Your item has been added! Thanks for using the Auction House!')
       } else {
         alert('The item you were looking to add does not want to, maybe check again?');
