@@ -14,7 +14,9 @@ if (process.env.JAWSDB_URL) {
     {
       host: 'localhost',
       dialect: 'mysql',
-      port: 3306
+      port: 3306,
+      // disables SQL query logging from sequelize
+      logging: false
     }
   );
 }
