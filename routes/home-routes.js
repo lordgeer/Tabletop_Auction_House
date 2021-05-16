@@ -2,8 +2,7 @@ const router = require('express').Router();
 const { Product } = require('../models');
 const withAuth = require('../utils/auth');
 
-
-
+// shows login page unless signed in, then shows shop page
 router.get('/', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
@@ -14,11 +13,11 @@ router.get('/', (req, res) => {
   res.render('login');
 });
 
+// shop route that requires sign-in
 router.get('/shop', withAuth, async (req, res) => {
   try {
     // Get all products and JOIN with user data
-    const productData = await Product.findAll({
-    });
+    const productData = await Product.findAll({});
     console.log(productData);
     // Serialize data so the template can read it
     const products = productData.map((product) => product.get({ plain: true }));
@@ -33,14 +32,13 @@ router.get('/shop', withAuth, async (req, res) => {
     res.status(400).json(err);
   }
 });
+
 // working signup route
 router.get('/signup', async (req, res) => {
   try {
     const { name, password } = req.body;
-   
-   
-      res.render('signup', {
-       
+  
+    res.render('signup', {
         logged_in: req.session.logged_in
       });
     } catch(err) {
@@ -49,6 +47,7 @@ router.get('/signup', async (req, res) => {
     }
   });
 
+  // product route
   router.get('/product', withAuth, async (req, res) => {
     try {
       // Get all products and JOIN with user data
@@ -68,10 +67,10 @@ router.get('/signup', async (req, res) => {
     }
   });
 
+  // view item route
   router.get('/view-item/:id', withAuth, async (req, res) => {
     try {
       const productData = await Product.findByPk(req.params.id, {});
-  
       const product = productData.get({ plain: true });
   
       res.render('view-item', {

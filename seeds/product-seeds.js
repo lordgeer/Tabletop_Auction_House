@@ -1,14 +1,15 @@
 const { Product } = require('../models');
 
-// All Pathfinder/DnD prices use gold as their currency
-// Vampire uses dots as their currency
-// Star Wars uses credits as the currency
+/* All Pathfinder/DnD prices use gold as their currency
+Vampire uses dots as their currency
+Star Wars uses credits as the currency*/
 
+// Product seeds
 const productData = [
   {
     product_name: "Cutlass",
     // category_name: "Weapons",
-    // store_name: "Pathfinder",
+    // store_name: "pathfinder",
     price: 15,
     stock: 23,
     category_id: 1,
