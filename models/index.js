@@ -1,8 +1,9 @@
+// Tags and ProductTags will be revisited during future development
 // import models
 const Product = require('./Product');
 const Category = require('./Category');
-// const Tag = require('./Tag');
-// const ProductTag = require('./ProductTag');
+/* const Tag = require('./Tag');
+  const ProductTag = require('./ProductTag');*/
 const User = require('./User');
 
 // Products belongsTo Category
@@ -14,24 +15,24 @@ Product.belongsTo(Category, {
 Category.hasMany(Product, {
   foreignKey: 'category_id',
   onDelete: 'SET NULL'
-})
+});
 
-// Products belongToMany Tags (through ProductTag)
-// Product.belongsToMany(Tag, {
-//   through: ProductTag,
-//   foreignKey: 'product_id'
-// })
+/* Products belongToMany Tags (through ProductTag)
+  Product.belongsToMany(Tag, {
+  through: ProductTag,
+  foreignKey: 'product_id'
+  })
 
-// Tags belongToMany Products (through ProductTag)
-// Tag.belongsTo(Product, {
-//   through: ProductTag,
-//   foreignKey: 'tag_id'
-// })
+  Tags belongToMany Products (through ProductTag)
+  Tag.belongsTo(Product, {
+  through: ProductTag,
+  foreignKey: 'tag_id'
+  }) */
 
 module.exports = {
   Product,
   Category,
-  // Tag,
-  // ProductTag,
+  /* Tag,
+  ProductTag,*/
   User
 };

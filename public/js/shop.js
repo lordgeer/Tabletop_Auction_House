@@ -4,10 +4,12 @@ document.getElementById("logout-button").addEventListener("click", function() {
   document.location.replace('/');
 });
 
+// Send you to product
 document.getElementById("addItem-button").addEventListener("click", function() {
   document.location.replace('/product');
 });
 
+// Allow viewing the item
 function viewItem() {
   var x, i;
   x = document.querySelectorAll(".viewItem-button");
@@ -20,6 +22,7 @@ function viewItem() {
 
 viewItem();
 
+// Allows to delete the item
 function deleteItem() {
   var x, i;
   x = document.querySelectorAll(".deleteItem-button");
@@ -33,7 +36,7 @@ function deleteItem() {
         if (response.ok) {
           document.location.replace('/shop');
         } else {
-          alert('There may have been a problem deleting. Maybe check that out and try again');
+          alert('There was a problem with deleting. Please try again.');
         }
       };
 

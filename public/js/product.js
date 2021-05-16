@@ -1,3 +1,4 @@
+// Handles the product form to allow items to be added to shop
 const productFormHandler = async (event) => {
     // Stop the browser from submitting the form so we can do so with JavaScript
     event.preventDefault();
@@ -19,13 +20,13 @@ const productFormHandler = async (event) => {
       });
       if (response.ok) {
         document.location.replace('/shop');
-        alert('Your item has been added! Thanks for using the Auction House!')
+        alert('Your item has been added! Thanks for using the Auction House!');
       } else {
-        alert('The item you were looking to add does not want to, maybe check again?');
+        alert('The item you did not add, please try again?');
       }
     }
   };
-
+// Selectors and event listeners
 document.getElementById("product-form").addEventListener("submit", productFormHandler);
 
 document.getElementById("goBack-button").addEventListener("click", function() {

@@ -1,3 +1,4 @@
+// Handles log-in form
 const loginFormHandler = async (event) => {
   // Stop the browser from submitting the form so we can do so with JavaScript
   event.preventDefault();
@@ -13,7 +14,6 @@ const loginFormHandler = async (event) => {
       body: JSON.stringify({ username, password }),
       headers: { 'Content-Type': 'application/json' },
     });
-    console.log(response);
     if (response.ok) {
       document.location.replace('/shop');
     } else {
@@ -22,6 +22,7 @@ const loginFormHandler = async (event) => {
   }
 };
 
+// Document selectors and event listeners
 document
   .querySelector('#login-form')
   .addEventListener('submit', loginFormHandler);

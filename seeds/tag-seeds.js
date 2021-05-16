@@ -1,20 +1,20 @@
-// const { Tag } = require('../models');
+/* const { Tag } = require('../models');
 
-// const storeData = [
-//   {
-//     store_name: 'd&d',
-//   },
-//   {
-//     store_name: 'starwars',
-//   },
-//   {
-//     store_name: 'pathfinder',
-//   },
-//   {
-//     store_name: 'vampire',
-//   },
-// ];
+// Store data seeds
+const storeData = [
+  {
+    store_name: 'd&d',
+  },
+  {
+    store_name: 'starwars',
+  },
+    store_name: 'pathfinder',
+  },
+  {
+    store_name: 'vampire',
+  },
+];
 
-// const seedTags = () => Tag.bulkCreate(storeData);
+const seedTags = () => Tag.bulkCreate(storeData);
 
-// module.exports = seedTags;
+module.exports = seedTags; */

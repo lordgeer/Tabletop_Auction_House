@@ -39,12 +39,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () =>
+    console.log(`We're sailing toward land! Port: ${PORT} is in sight!`)
+  );
 });
-
-//   app.listen(PORT, () => {
-//   console.log(`We're sailing towards land! Port: ${PORT} is in sight!`);
-// });
 
 
 

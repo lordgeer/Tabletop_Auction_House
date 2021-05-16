@@ -1,15 +1,18 @@
-const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
-const sequelize = require('../config/connection');
+// import important parts of sequelize library
+const { Model, DataTypes } = require("sequelize");
+// bcrypt import
+const bcrypt = require("bcrypt");
+// import our database connection from config.js
+const sequelize = require("../config/connection");
 
+// Initialize User model by extending off Sequelize's Model class
 class User extends Model {
   checkPassword(loginPw) {
-    console.log(loginPw, this.password);
-    // console.log(bcrypt.compareSync(loginPw, this.password));
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
+// sets up fields/rules for User model and defines columns
 User.init(
   {
     id: {
@@ -22,7 +25,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-      password: {
+    password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -41,7 +44,7 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: "user",
   }
 );
 

@@ -1,7 +1,9 @@
-document.getElementById("goBack-button").addEventListener("click", function() {
+// Go back button function
+document.getElementById("goBack-button").addEventListener("click", function () {
     document.location.replace('/shop');
 });
 
+// Delete items
 function deleteItem() {
   var x, i;
   x = document.querySelectorAll(".deleteItem-button");
@@ -20,7 +22,7 @@ function deleteItem() {
           document.location.replace("/shop");
         } else {
           alert(
-            "There may have been a problem deleting. Maybe check that out and try again"
+            "There may have been a problem deleting. Please try again."
           );
         }
       };
@@ -32,32 +34,33 @@ function deleteItem() {
 
 deleteItem();
 
+// Item category shows
 switch(document.getElementById("item-category").attributes[3].nodeValue) {
   case "1":
-    document.getElementById("item-category").innerHTML = "Weapons"
+    document.getElementById("item-category").innerHTML = "Weapons";
     break;
   case "2":
-    document.getElementById("item-category").innerHTML = "Armor"
+    document.getElementById("item-category").innerHTML = "Armor";
     break;
   case "3":
-    document.getElementById("item-category").innerHTML = "Utility"
+    document.getElementById("item-category").innerHTML = "Utility";
     break;
   case "4":
-    document.getElementById("item-category").innerHTML = "Technology"
+    document.getElementById("item-category").innerHTML = "Technology";
     break;
   case "5":
-    document.getElementById("item-category").innerHTML = "Companions"
+    document.getElementById("item-category").innerHTML = "Companions";
     break;
   case "6":
-    document.getElementById("item-category").innerHTML = "Droids"
+    document.getElementById("item-category").innerHTML = "Droids";
     break;
   case "7":
-    document.getElementById("item-category").innerHTML = "Magic Items"
+    document.getElementById("item-category").innerHTML = "Magic Items";
     break;
   case "8":
-    document.getElementById("item-category").innerHTML = "Vehicles"
+    document.getElementById("item-category").innerHTML = "Vehicles";
     break;
   case "9":
-    document.getElementById("item-category").innerHTML = "Mounts"
+    document.getElementById("item-category").innerHTML = "Mounts";
     break;
 }
