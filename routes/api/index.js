@@ -11,5 +11,4 @@ router.use('/users', userRoutes);
 
 module.exports = router;
 
-
-
+// Tags will be implemented in future development

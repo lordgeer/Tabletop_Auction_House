@@ -1,39 +1,40 @@
-// const { Model, DataTypes } = require('sequelize');
+/* Tags and ProductTags will be revisited during future development
+  const { Model, DataTypes } = require('sequelize');
 
-// const sequelize = require('../config/connection');
+  const sequelize = require('../config/connection');
 
-// class ProductTag extends Model {}
-//   // define columns
-// ProductTag.init(
-//   {
-//     id: {
-//       type: DataTypes.INTEGER,
-//       allowNull: false,
-//       primaryKey: true,
-//       autoIncrement:true
-//     },
-//     // product_id: {
-//     //   type: DataTypes.INTEGER,
-//     //   references: {
-//     //     model: 'product',
-//     //     key: 'id'
-//     //   }
-//     // },
-//     tag_id: {
-//       type: DataTypes.INTEGER,
-//       references: {
-//         model: 'tag',
-//         key: 'id'
-//       }
-//     }
-//   },
-//   {
-//     sequelize,
-//     timestamps: false,
-//     freezeTableName: true,
-//     underscored: true,
-//     modelName: 'product_tag',
-//   }
-// );
+  class ProductTag extends Model {}
+  // define columns
+  ProductTag.init(
+    {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement:true
+    },
+      product_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'product',
+        key: 'id'
+      }
+    },
+    tag_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'tag',
+        key: 'id'
+      }
+    }
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'product_tag',
+  }
+);
 
-// module.exports = ProductTag;
+module.exports = ProductTag; */

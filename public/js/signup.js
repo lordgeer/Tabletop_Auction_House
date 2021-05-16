@@ -1,7 +1,9 @@
-document.getElementById("goBack-button").addEventListener("click", function() {
+// Go back button function
+document.getElementById("goBack-button").addEventListener("click", function () {
   document.location.replace('/');
 });
 
+// Sign up form handling
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
@@ -16,11 +18,12 @@ const signupFormHandler = async (event) => {
       if (response.ok) {
           document.location.replace('/shop');
         } else {
-          alert('Failed to Signup, Please try again\nIf your problem persists, please contact customer service\n(customer services still pending and are unavailable at this time)');
+          alert('Failed to sign-up. Please try again\nIf your problem persists, please contact customer service.\n(Customer services are still pending and unavailable at this time.)');
         }
   }
 };
 
+// Selectors and event listeners
 document
     .querySelector('#signup-form')
     .addEventListener('submit', signupFormHandler);

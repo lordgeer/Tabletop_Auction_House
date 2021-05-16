@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { User } = require('../../models');
 // const seedUsers = require('../../seeds/user-seeds');
 
+// post login route
 router.post('/login', async (req, res) => {
   console.log('route-hit');
   try {
@@ -35,6 +36,7 @@ router.post('/login', async (req, res) => {
     
   }
 });
+
 // post route for signup
 router.post('/signup', async (req, res) => {
   try {
@@ -51,7 +53,7 @@ router.post('/signup', async (req, res) => {
   }
 });
 
-
+// post route for logout
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     // Remove the session variables
