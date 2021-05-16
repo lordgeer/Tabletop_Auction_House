@@ -18,7 +18,6 @@ router.get('/shop', withAuth, async (req, res) => {
   try {
     // Get all products and JOIN with user data
     const productData = await Product.findAll({});
-    console.log(productData);
     // Serialize data so the template can read it
     const products = productData.map((product) => product.get({ plain: true }));
 
@@ -51,9 +50,7 @@ router.get('/signup', async (req, res) => {
   router.get('/product', withAuth, async (req, res) => {
     try {
       // Get all products and JOIN with user data
-      const productData = await Product.findAll({
-      });
-      console.log(productData);
+      const productData = await Product.findAll({});
       // Serialize data so the template can read it
       const products = productData.map((product) => product.get({ plain: true }));
       // Pass serialized data and session flag into template
