@@ -4,23 +4,52 @@
 
 ## Description
 
-Our goal is to create an auction interface for role-playing gamers to buy/sell/trade in-game items for fun and profit.
+*Our goal is to create an auction house interface for roleplaying game masters and players to buy, sell, and trade in-game items for fun and profit.*
 
-INSERT MORE DESCRIPTION HERE
+Tabletop Auction House provides a marketplace for gamers and game masters to create and exchange in-game equipment, both reducing the creative pressure on the gm and establishing a unique channel by which games might grow and evolve.
+
+Sometimes you don’t want to have to think about the ‘simple’ things when it comes to world-building. Our marketplace takes some of that pressure off while also creating a way to advance the story to whatever depth is desired by the team.
+
+As a game master, you can:
+
+* Display ordinary items for players to purchase
+* Introduce items that affect the narrative and move the party in new ways through their environment
+
+As a gamer, you can:
+
+* See gear standards for your game
+* Grab cool items for your character
+
+Visit the Tabletop Auction House today for your roleplaying marketplace needs.
 
 Tabletop Auction House uses JavaScript, Handlebars, MySQL/JawsDB, Heroku, Tailwind CSS, Book Brush, and a Favicon Generator. More technologies that we would like to add in the future include Cloudinary and RPG-Awesome.
 
 ## Table of Contents
 
 * [Description](#description)
+* [Installation](#installation)
 * [Usage](#usage)
 * [Wireframe](#wireframe)
 * [Credits](#credits)
 * [License](#license)
 
-## Usage
+## Installation
 
-The log-in page is the first page of the website a user will see when they visit.
+To install the application's dependencies, type the following:
+```md
+npm install
+```
+To build Tailwind CSS, type the following:
+```md
+npm run tw:build
+```
+To run the server after you've added the schema.sql to your MySQL Workbench, type the following:
+```md
+npm start
+```
+Once those steps are done, you can view the application in your browser using localhost:3001.
+
+## Usage
 
 ![Tabletop Auction House](./src/assets/login-screenshot.png)
 
