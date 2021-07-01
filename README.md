@@ -81,7 +81,7 @@ A wireframe showing the page's design.
 
 Tabletop Auction House is a coding project done by the Friendly Merchants. The team members are:
 * Elise Daly - [https://github.com/elisesamanthadaly/](https://github.com/elisesamanthadaly/)
-* Sarah Mäkelä - [https://github.com/smakela13/](https://github.com/smakela13/)
+* Soma Mäkelä - [https://github.com/smakela13/](https://github.com/smakela13/)
 * Thomas Musler - [https://github.com/lordgeer/](https://github.com/lordgeer/)
 * Dana Merrill - [https://github.com/dtmerrill/](https://github.com/dtmerrill/)
 
